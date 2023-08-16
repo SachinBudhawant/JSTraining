@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        @keyframes headingEffects
+        {
+            from{
+                margin-left: 100%;
+            }
+            20%{
+                transform: rotate(120deg);
+            }
+            50%{
+                width: 400px;
+                height: 400px;
+            }
+    
+            to{
+                margin-left: 0%;    
+            }
+        }
+        img{
+            animation-name: headingEffects;
+            animation-duration: 3s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite ;
+        
+        }
+        body
+        {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <img src="../assets/apple.jpg" width="100" height="100">
+</body>
+</html>

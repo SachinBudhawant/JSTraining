@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <title>Day64 Compare</title>
+    <script>
+        var users=[{UserName:'Sachin',Password:'Sachin12'},
+        {UserName:'Savita',Password:'Savita12'},
+        {UserName:'Sangita',Password:'Sangita12'},
+        {UserName:'Kavita',Password:'Kavita12'},
+        {UserName:'Ranjana',Password:'Ranjana12'},
+        {UserName:'Dattatrya',Password:'Dattatrya12'}
+        ];
+        function Verify(){
+            var uname=document.getElementById("txtName").value;
+            var pswd=document.getElementById("txtPwd").value;
+           
+            for(var user of users){
+                if(user.UserName===uname && user.Password===pswd)
+                {
+                    document.write("<h2>Login Success</h2>");
+                }   
+                   else
+                   { 
+                    document.getElementById("msg").innerHTML="Invalid User Name/Password";
+             
+                 }
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+    <h2>Register User</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="txtName"></dd>
+        
+        <dt>Password</dt>
+        <dd><input type="password" id="txtPwd"></dd>
+    </dl>
+    <button onclick="Verify()">Login</button>
+    <h2 id="msg" class="text-center text-danger"></h2>
+</body>
+</html>

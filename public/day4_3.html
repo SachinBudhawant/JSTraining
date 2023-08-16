@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form>
+            
+            <table frame="box" align="center" width="300" cellspacing="" cellpadding="" border="1">
+                <caption>Registration Form</caption>
+                <tbody>
+                     <tr>
+                         <th>First Name</th>
+                         <td><input type="text" name="fname" placeholder="Enter Your First name"></td>
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td><input type="text" name="lname" placeholder="Enter Your Last name"></td>
+                   </tr>
+                   <tr>
+                    <th>Password</th>
+                    <td><input type="password" name="pass"></td>
+                    </tr>
+                    <tr>
+                        <th>Email Id</th>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <th>Mobile No</th>
+                        <td><input type="text" name="mobile" min="10" max="10"></td>
+                    </tr>
+                    <tr>
+                        <th>Address</th>
+                        <td><textarea rows="4" cols="25"></textarea></td>
+                    </tr>
+                    <tr >
+                        <th>Gender</th>
+                        <td><input type="radio" name="gender">Male</td>
+                        <td><input type="radio" name="gender">Female</td>
+                    </tr>
+                    <tr>
+                        <th>Hobbies</th>
+                        <td><input type="checkbox" name="hobby" value="cricket">Cricket</td>
+                        <td><input type="checkbox" name="hobby" value="reading">Reading</td>
+                        <td><input type="checkbox" name="hobby" value="cooking">Cooking</td>
+                       
+                        </tr>
+                        <tr>
+                            <th>DOB</th>
+                            <td><input type="date" name="dob">
+                        </tr>
+                        <tr>
+                            <th>Country</th>
+                            <td><select>
+                                <option>Select Your Country</option>
+                                <option>India</option>
+                                <option>USA<option>
+                                <option>UK</option>
+                                <option>China</option>
+                                </select></td>
+
+                            </tr>
+                            <tr>
+                                <th>Upload your pic</th>
+                                <td><input type="file" name="files"></td>
+                            </tr>
+                        
+                </tbody>
+                <tfoot>
+                 <tr>
+                     <!--<td>&nbsp;</td>-->
+                     <td><button type="submit">Submit</button></td>
+                     <td><button type="reset">Reset</button></td>
+                 </tr>
+                </tfoot>
+            </table> 
+         
+        </form>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS DIV</title>
+        <style>
+        
+            #detail{
+                    
+                    width: 300px;
+                    border: 2px solid black;
+                    box-shadow: 3px 2px 3px gray;
+                    padding: 20px;
+                    margin: 20px;
+
+           } 
+           
+        </style>
+       </head>
+    <body id="demo">
+        <form id="detail">
+            <fieldset>
+                <legend>Registration Form</legend>
+                <dl>
+                    <dt>User_Name</dt>
+                    <dd><input type="text" name="user" autofocus placeholder="Enter Your Name" pattern="[A-Za-z]{3,10}"> </dd>
+                </dl>
+                <dl>
+                    <dt>Password</dt>
+                    <dd><input type="password" placeholder="Enter Your password" name="pass" minlength="3" maxlength="10"> </dd>
+                </dl>
+                <dl>
+                    <dt>Email ID</dt>
+                    <dd><input type="email" name="email"> </dd>
+                </dl>
+                <dl>
+                    <dt>Mobile Number</dt>
+                    <dd><input type="text" name="num" pattern="[0-9]{10}"> </dd>
+                </dl>
+                <dl>
+                    <dt>Age</dt>
+                    <dd><input type="number" name="age"> </dd>
+                </dl>
+
+
+                <dl>
+                    <dt>Address</dt>
+                    <dd><input type="textarea" name="add"> </dd>
+                </dl>
+                <dl>
+                    <dt>Select Country</dt>
+                    <dd>
+                    <select name="category">
+                        
+                      <optgroup label="Asia">
+                        <option value="ind" selected>India</option>
+                        <option value="chi">China</option>
+                        <option value="bhu">Bhutan</option>
+                        </optgroup>
+                        <optgroup label="North-America">
+                            <option value="usa">USA</option>
+                            <option value="can">Canada</option>
+                            <option value="mex">Mexico</option>
+                        </optgroup>
+                      </select>
+                      </dd> 
+                  
+                <dl>
+                    <dt>Select gender</dt>
+                    <dd>
+                        <input type="radio" value="Male" name="Gender"checked>Male
+                        <input type="radio" value="Female" name="Gender">Female
+                        
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>Hobbies</dt>
+                    <dd>
+                        
+                        <input type="checkbox" value="upi" name="pay" checked name="pay">UPI
+                        <input type="checkbox" value="gpay"name="pay">Gpay
+                        <input type="checkbox" value="amazon"name="pay">Amazon
+                        
+                    </dd>
+                    </dl>
+               
+                    <dl>
+                    
+                        <dd>
+                            
+                            <button type="submit" value="sub">Submit</button>
+                            <button type="reset" value="res">Reset</button>
+                            
+                        </dd>
+                        </dl>
+                   
+               
+               
+
+
+            </fieldset>
+            
+            </form>
+
+    </body>
+</html>

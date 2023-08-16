@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day1</title>
+        <script>
+            function SubmitClick()
+            {
+                 var name=prompt("Your name");
+                var age=document.getElementById("lstAge").value;
+                var msg=`Hello ${name} your are ${parseInt(age)} year old`;
+                document.write(`<h2 align="center">${msg}</h2>`);
+               }
+        </script>
+    </head>
+    <body>
+        
+            <h3>Enter Your Age</h3>
+            <input type="text" id="lstAge" value="15"></input>
+        
+            <button onClick="SubmitClick()">Submit</button>
+        
+    
+
+    </body>
+</html>

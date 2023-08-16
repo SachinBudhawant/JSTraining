@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Day32
+        </title>
+        <style>
+             h2{
+                background-color: yellow;
+                text-align: center;
+                color: red;
+                border: 2px black dotted;
+           }
+            #css{
+                text-align: center;
+                padding: 20px;
+            }
+            .boot{
+                text-align: center;
+            }
+            .strap{
+                padding:20px;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            div p{
+                color: blueviolet;
+            }
+            blockquote > p{
+                color: aquamarine;
+
+            }
+            h3~p{
+                color:red;
+            }
+            h3+p{
+                color: blue;
+            }
+            p[class="effects"]
+            {
+                color:aqua;
+            }
+            p[class^="effects"]
+            {
+                color:aqua;
+            }
+            p[class$="effects"]
+            {
+                color:aqua;
+            }
+            p[class|="effects"]
+            {
+                color:aqua;
+            }
+            p[class~="effects"]
+            {
+                color:aqua;
+            }
+    </style>
+    </head>
+    <body>
+        <h2>HTML</h2>
+        <h2 id="css">CSS</h2>
+        <h2 class="boot strap">Bootstrap</h2>
+        <div>
+            <p>phase-1</p>
+            <p>phase-2</p>
+            <p>phase-3</p>
+        </div>
+        <blockquote>
+            <p>phase-4</p>
+            <p>phase-5</p>
+        </blockquote>
+        
+        <h3>Web Tech</h3>
+        <p>Demo-1</p>
+        <p>Demo-2</p>
+        <h4>Coding</h4>
+        <p>Demo-3</p>
+        <p>Demo-4</p>
+
+        
+        <p class="effects">Phase-2</p>
+        <p class="effectspara">Phase-3</p>
+        <p class="paraeffects">Phase-4</p>
+        <p class="para effects>Phase-5</p>
+        <p class="para-effects>Phase-6</p>
+        </body>
+</html>

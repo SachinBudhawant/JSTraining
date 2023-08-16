@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day60 API</title>
+        <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../bootstrap-icons-1.3.0/bootstrap-icons.css">
+        <script>
+            function bodyload()
+            {
+                fetch("https://fakestoreapi.com/products/categories")
+                .then(function(response){
+                    return response.json();
+                }).then(function(data)
+                {
+                    data.unshift("All");
+                    for(var item of data)
+                    {
+                        var option=document.createElement("option");
+                        option.text=item.toUpperCase();
+                        option.value=item;
+                        document.getElementById("lstcategories").appendChild(option);
+                    }    
+                })
+                fetch("https://fakestoreapi.com/products")
+                .then(function(response){
+                    return response.json();
+                }).then(function(data)
+                {
+                    for(var item of data)
+                    {
+                   var div=document.createElement("div");
+                   div.className="card m-2 p-2";
+                   div.style.width="200px";
+                   div.innerHTML = `
+                    <img src=${item.image} class="card-img-top" height="200">
+                    <div class="card-header" style="height:100px">
+                        <p>${item.title}</p>
+                        </div>
+                        <div class="card-body">
+                        <p>${item.price}</p>
+                        <p>Rating: ${item.rating.rate}</p>
+                        <p>Count:${item.rating.count}</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-danger w-100">
+                                <span class="bi bi-cart4"></span>Add to cart
+                                </button>
+                            </div>
+                            `;
+                            document.getElementById("productsContainer").appendChild(div);
+
+            }
+        })
+            }
+            </script>
+    </head>
+<body class="container-fluid" onload="bodyload()">
+    <header class="bg-danger text-white text-center p-2">
+        <h1><span class="bi bi-cart4"></span> Online Shopping</h1>    
+    </header>
+    <div class="row mt-3">
+        <div class="col-3">
+            <h3>Select a Category</h3>
+            <select class="form-select" id="lstcategories">
+
+            </select>
+        </div>
+        <div class="col-9">
+            <div id="productsContainer" class="d-flex flex-wrap overflow-auto" style="height:500px;">
+
+            </div>
+        </div>
+    </div>
+
+    
+
+
+</body>
+</html>
+        

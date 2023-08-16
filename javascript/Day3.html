@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Demo</title>
+    <script>
+        function VerifyUser()
+        {
+        var username=document.getElementById("txtName").value;
+        var msg=document.getElementById("msg");
+        if(username.length>=4 && username.length<=10)
+        {
+            msg.innerHTML ="User Name Verified".bold().fontcolor('green').italics();
+        }else{
+            msg.innerHTML ="User Name must be 4 to 10 chars only".fontcolor('red').italics();
+            
+        }   
+
+        }
+
+        function ChangeCase()
+        {
+            var username=document.getElementById("txtName").value;
+            document.getElementById("txtName").value=username.toUpperCase();
+      
+        }
+
+        function ChangeColor(){
+            document.querySelector("h1").innerHTML="Welcome to JavaScript".fontcolor(document.querySelector("select").value);
+        }
+    </script>
+</head>
+<body>
+    <h2>Registr User</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" id="txtName" placeholder="Block letter" onblur="ChangeCase()" onkeyup="VerifyUser()"></dd>
+        <dd id="msg"></dd>
+    </dl>
+    <button onclick="VerifyUser()">Submit</button>
+
+    <fieldset>
+        <legend>Choose Effects</legend>
+        <dl>
+            <dt>Font Color</dt>
+            <dd>
+                <select onchange="ChangeColor()">
+                    <option>Red</option>
+                    <option>Green</option>
+                    <option>Yellow</option>
+                    <option>Pink</option>
+                
+                </select>
+            </dd>
+        </dl>
+    </fieldset>
+    <h1> </h1>
+</body>
+</html>
